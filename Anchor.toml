@@ -1,0 +1,18 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.devnet]
+presales = "7EJv7nx5RmT5Zhbf86XTsaMhfCjp9SteJmQtz3qfTFT4"
+
+[registry]
+url = "https://api.devnet.solana.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/Users/divyanshtangri/.config/solana/id.json"
+
+[scripts]
+test = "yarn run mocha tests/**/*.js"
