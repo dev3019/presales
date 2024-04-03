@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "name": "presales",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [],
+      "args": []
+    }
+  ],
+  "metadata": {
+    "address": "HE51UM7EXK13RDxCZvmcwsf18E4aGCZZRemq5qDKAaHh"
+  }
+}

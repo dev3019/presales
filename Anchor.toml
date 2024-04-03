@@ -4,15 +4,15 @@
 seeds = false
 skip-lint = false
 
-[programs.devnet]
-presales = "7EJv7nx5RmT5Zhbf86XTsaMhfCjp9SteJmQtz3qfTFT4"
+[programs.localnet]
+presales = "HE51UM7EXK13RDxCZvmcwsf18E4aGCZZRemq5qDKAaHh"
 
 [registry]
-url = "https://api.devnet.solana.com"
+url = "https://api.apr.dev"
 
 [provider]
-cluster = "devnet"
-wallet = "/Users/divyanshtangri/.config/solana/id.json"
+cluster = "Localnet"
+wallet = "./keypair.json"
 
 [scripts]
 test = "yarn run mocha tests/**/*.js"

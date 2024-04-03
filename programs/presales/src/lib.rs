@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("7EJv7nx5RmT5Zhbf86XTsaMhfCjp9SteJmQtz3qfTFT4");
+declare_id!("HE51UM7EXK13RDxCZvmcwsf18E4aGCZZRemq5qDKAaHh");
 
 #[program]
 pub mod token_presale_program {
