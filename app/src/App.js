@@ -115,6 +115,23 @@ function App() {
     }
   }
 
+  const startSale = async()=>{
+    try {
+      const provider = getProvider();
+      const program = new Program(idl, programID, provider);
+      const presale = Keypair.fromSecretKey(Buffer.from([222,122,52,210,252,195,160,90,226,104,28,208,199,235,110,170,20,37,104,233,86,143,82,49,67,159,185,246,29,16,81,246,162,158,65,197,194,14,115,143,135,236,149,60,89,9,24,236,211,175,19,166,162,185,122,155,96,19,0,156,246,149,195,159], 'base64'))
+      await program.rpc.setTokenPrice(0.2, {
+        accounts: {
+            presale: presale.publicKey,
+            payer: provider.wallet.publicKey
+        },
+      });
+      console.log('Token price set.')
+    } catch (error) {
+      console.error('Error starting sale: ', error)
+    }
+  }
+
   const renderNotConnectedContainer = () => {
     return (<button onClick={connectWallet}>Connect to Wallet</button>)
   }
@@ -125,6 +142,7 @@ function App() {
         <button onClick={initToken}>init token</button>
         <button onClick={initPresale}>init presale</button>
         <button onClick={fetchPresale}>fetch presale</button>
+        <button onClick={startSale}>Start Sale</button>
       </>
     )
   }
